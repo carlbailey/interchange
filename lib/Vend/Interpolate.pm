@@ -3172,7 +3172,7 @@ sub find_sort {
 sub more_link_template {
 	my ($anchor, $arg, $form_arg) = @_;
 
-	my $url = tag_area("scan/MM=$arg", '', {
+	my $url = tag_area("scan/MM=$arg", undef, {
 	    form => $form_arg,
 	    secure => $CGI::secure,
 	});
