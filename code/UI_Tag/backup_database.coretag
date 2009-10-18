@@ -37,6 +37,7 @@ sub {
 	undef $opt->{xls} unless $xls;
 
 	if($opt->{xls}) {
+        $xls->compatibility_mode();
 		if($opt->{max_xls_string}) {
 			$Max_xls_string = int($opt->{max_xls_string}) || 255;
 			$xls->{_xls_strmax} = $Max_xls_string;
