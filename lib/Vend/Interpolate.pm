@@ -3172,9 +3172,10 @@ sub find_sort {
 sub more_link_template {
 	my ($anchor, $arg, $form_arg) = @_;
 
-	my $url = tag_area("scan/MM=$arg", undef, {
-	    form         => $form_arg,
-	    match_secure => 1;
+	my $url = tag_area( undef, undef, {
+        search         => qq{MM=$arg},
+	    form           => $form_arg,
+	    match_security => 1,
 	});
 
 	my $lt = $link_template;
